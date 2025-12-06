@@ -1,0 +1,463 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Organic Chemistry Lab Report
+% Lab 1: Recrystallization & Melting Point Determination
+%
+% Professional Research Paper Format (ACS-inspired)
+%
+% License: CC BY-NC-SA 4.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CLASS AND PACKAGES
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	10pt,        % Smaller font for two-column
+	twocolumn,   % Professional two-column layout
+	letterpaper,
+]{article}
+
+% Page geometry (journal-style margins)
+\usepackage[
+	top=0.75in,
+	bottom=1in,
+	left=0.75in,
+	right=0.75in,
+	columnsep=0.25in, % Space between columns
+	headheight=14pt,
+]{geometry}
+
+% Core packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}         % Palatino font
+\usepackage{microtype}        % Professional micro-typography (spacing, protrusion)
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+% Chemistry-specific packages
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{
+	separate-uncertainty=true,
+	range-phrase=--,
+	range-units=single
+}
+\usepackage{chemfig}
+
+% Bibliography
+\usepackage[
+	backend=biber,
+	style=chem-acs,
+	sorting=none,
+]{biblatex}
+\addbibresource{references.bib}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=blue!70!black,
+	urlcolor=blue!70!black,
+}
+\usepackage{xurl}
+
+% Section styling (compact, bold, sans-serif headings)
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.1ex}{0.8ex plus 0.1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.2ex minus 0.1ex}{0.5ex plus 0.1ex}
+
+% Headers and footers (minimal for journal style)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Recrystallization \& Melting Point}}
+\fancyhead[R]{\small\textit{M. Li}}
+\fancyfoot[C]{\thepage}
+
+% Paragraph formatting (indented, no extra spacing - classic journal style)
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+
+% Caption formatting
+\usepackage{caption}
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	justification=justified,
+	singlelinecheck=false,
+	skip=6pt,
+}
+
+% Balance columns on last page
+\usepackage{balance}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR INFORMATION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\reporttitle}{Recrystallization and Melting Point Determination of Benzoic Acid}
+\newcommand{\reportauthor}{Matthew Li}
+\newcommand{\reportpartner}{Tintin Ding}
+\newcommand{\reportinstructor}{Mr. O}
+\newcommand{\reportcourse}{CL Organic Chemistry}
+\newcommand{\reportsection}{B4}
+\newcommand{\reportinstitution}{Loomis Chaffee High School}
+\newcommand{\reportdate}{\today}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT BODY
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE BLOCK (spans both columns)
+%----------------------------------------------------------------------------------------
+
+\twocolumn[
+	\begin{@twocolumnfalse}
+		\centering
+		\vspace{0.5cm}
+		{\Large\bfseries \reporttitle \par}
+		\vspace{0.4cm}
+		{\normalsize \reportauthor\textsuperscript{*} and \reportpartner \par}
+		\vspace{0.2cm}
+		{\small\itshape \reportinstitution, \reportcourse\ (Section \reportsection) \par}
+		{\small\itshape Instructor: \reportinstructor \quad $\cdot$ \quad \reportdate \par}
+		\vspace{0.6cm}
+		
+		% Abstract within the full-width block
+		\noindent\rule{\textwidth}{0.4pt}
+		\vspace{0.3cm}
+		\begin{minipage}{0.92\textwidth}
+			\small
+			\textbf{Abstract:}
+			\textit{[Write a concise summary of the experiment. Include: (1) the purpose---to purify impure benzoic acid via recrystallization and determine its melting point; (2) brief methods---dissolved in hot water, cooled for crystallization, vacuum filtered, measured melting points; (3) key results---report the melting points of impure and pure samples, and percent recovery; (4) conclusions---comment on the success of purification based on melting point data.]}
+		\end{minipage}
+		\vspace{0.3cm}
+		\noindent\rule{\textwidth}{0.4pt}
+		\vspace{0.5cm}
+	\end{@twocolumnfalse}
+]
+
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION (+6 points)
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - State the PROBLEM and REASON for this experiment
+% - Discuss the TECHNIQUES used (recrystallization, melting point determination)
+% - Review relevant BACKGROUND information and THEORY
+% - Include citations from the literature where appropriate
+% - Explain WHY recrystallization works (solubility vs. temperature)
+% - Explain HOW melting point indicates purity
+
+% TODO: Write your introduction here
+
+% Paragraph 1: Purpose and significance
+\textit{[State the purpose of this experiment. Explain why purification of organic compounds is important in chemistry.]}
+
+% Paragraph 2: Recrystallization theory
+\textit{[Explain the theory behind recrystallization. Discuss how solubility changes with temperature and why impurities are left behind in solution.]}
+
+% Paragraph 3: Melting point and purity
+\textit{[Explain how melting point is used to assess purity. Discuss the relationship between impurities and melting point range/depression.]}
+
+% Paragraph 4: Benzoic acid properties
+\textit{[Provide background on benzoic acid (\ce{C6H5COOH}), including its structure, physical properties, and solubility in water. Cite your sources.]}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIMENTAL DETAILS (+10 points)
+%----------------------------------------------------------------------------------------
+
+\section{Experimental Details}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - Describe procedures in enough detail that someone else could replicate your work
+% - Include all materials, apparatus, and quantities used
+% - Report actual masses and volumes (not just "about 1 g")
+% - Describe special precautions or safety considerations
+% - Use past tense and passive voice (e.g., "The sample was heated...")
+
+\subsection{Materials and Apparatus}
+
+% TODO: List your materials
+\begin{itemize}
+	\item Impure benzoic acid sample (mass: 1.018 g)
+	\item Deionized (DI) water
+	\item \SI{125}{\milli\liter} Erlenmeyer flask or beaker
+	\item \SI{150}{\milli\liter} beaker
+	\item Hot plate
+	\item Ice bath
+	\item Vacuum filtration apparatus (Büchner funnel, filter flask, vacuum trap)
+	\item Filter paper (mass: 1.099 g)
+	\item Melting point apparatus
+	\item Melting point capillary tubes
+	\item Analytical balance
+	\item Watch glass or weighing boat
+\end{itemize}
+
+\subsection{Procedure}
+
+% TODO: Describe your procedure
+\subsubsection{Day 1: Recrystallization}
+
+\textit{[Describe the recrystallization procedure:
+\begin{enumerate}
+	\item Record the melting point of impure benzoic acid
+	\item Weigh out approximately 1.00 g of impure benzoic acid
+	\item Heat DI water to near boiling
+	\item Dissolve the impure benzoic acid in hot water (record volume used)
+	\item Allow solution to cool slowly to room temperature
+	\item Place in ice bath to enhance crystallization
+	\item Collect crystals by vacuum filtration
+	\item Allow crystals to dry overnight
+\end{enumerate}]}
+
+\subsubsection{Day 2: Analysis}
+
+\textit{[Describe the analysis procedure:
+\begin{enumerate}
+	\item Retrieve dried crystals from drying oven
+	\item Record mass of purified benzoic acid
+	\item Measure melting point of purified benzoic acid
+\end{enumerate}]}
+
+%----------------------------------------------------------------------------------------
+%	RESULTS (+6 points)
+%----------------------------------------------------------------------------------------
+
+\section{Results}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - Present your data clearly using tables and figures
+% - Include all measured values with appropriate significant figures
+% - Use proper units throughout
+% - Label all tables and figures with descriptive captions
+% - Reference all tables and figures in the text
+
+\subsection{Experimental Data}
+
+% TODO: Replace placeholder values with your actual data
+\begin{table}[htbp]
+	\centering
+	\caption{Summary of experimental mass and melting point data for benzoic acid recrystallization.}
+	\label{tab:data}
+	\begin{tabular}{@{}lrl@{}}
+		\toprule
+		\textbf{Measurement} & \textbf{Value} & \textbf{Unit} \\
+		\midrule
+		Mass of impure benzoic acid & \textit{XX.XX} & \si{\gram} \\
+		Volume of hot water used & \textit{XX} & \si{\milli\liter} \\
+		Mass of filter paper & \textit{X.XXX} & \si{\gram} \\
+		Mass of filter paper + crystals & \textit{X.XXX} & \si{\gram} \\
+		Mass of purified benzoic acid & \textit{X.XXX} & \si{\gram} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Melting point data for impure and purified benzoic acid samples.}
+	\label{tab:melting-points}
+	\resizebox{\columnwidth}{!}{%
+	\begin{tabular}{@{}lcc@{}}
+		\toprule
+		\textbf{Sample} & \textbf{MP Range} & \textbf{Width} \\
+		\midrule
+		Impure & \textit{XX--XX} \si{\celsius} & \textit{X.X} \si{\celsius} \\
+		Purified & \textit{XX--XX} \si{\celsius} & \textit{X.X} \si{\celsius} \\
+		Literature\textsuperscript{*} & \SI{122.4}{\celsius} & --- \\
+		\bottomrule
+	\end{tabular}%
+	}
+	
+	{\footnotesize\textsuperscript{*}Cite source for literature MP.}
+\end{table}
+
+\subsection{Calculations}
+
+% TODO: Show your percent recovery calculation
+\subsubsection{Percent Recovery}
+
+The percent recovery of benzoic acid was calculated using the following equation:
+
+\begin{equation}
+	\%\ \text{Recovery} = \frac{m_{\text{pure}}}{m_{\text{impure}}} \times 100\%
+	\label{eq:recovery}
+\end{equation}
+
+\textit{(Show your calculation with actual values:)}
+
+\[
+\text{Percent Recovery} = \frac{\textit{mass recovered} \text{ g}}{\textit{initial mass} \text{ g}} \times 100\% = \textit{XX.X}\%
+\]
+
+%----------------------------------------------------------------------------------------
+%	DISCUSSION (+18 points)
+%----------------------------------------------------------------------------------------
+
+\section{Discussion}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - Interpret your results and relate them to the stated objectives
+% - Discuss what your results MEAN
+% - Compare your results to expected/literature values
+% - You MUST address all 7 questions from the lab handout in this section
+% - Use subsections to organize your discussion logically
+
+\subsection{Structure and Intermolecular Forces of Benzoic Acid}
+
+% Question 1 (+2 points): Draw the bond line structure for benzoic acid
+\subsubsection{Structure of Benzoic Acid}
+
+\textit{[Draw the bond line structure of benzoic acid using ChemDraw or similar software, or use the chemfig package. Include the figure with a proper caption.]}
+
+% Example using chemfig (you can replace with an image):
+\begin{figure}[htbp]
+	\centering
+	% TODO: Replace with your own drawing or include an image file
+	\chemfig{*6(-=-(-COOH)=-=)}
+	\caption{Bond line structure of benzoic acid (\ce{C6H5COOH}).}
+	\label{fig:benzoic-acid}
+\end{figure}
+
+% Question 2 (+2 points): Identify the types of IMFs present
+\subsubsection{Intermolecular Forces in Benzoic Acid}
+
+\textit{[Identify ALL types of intermolecular forces (IMFs) present in benzoic acid:
+\begin{itemize}
+	\item Hydrogen bonding (carboxylic acid group)
+	\item Dipole-dipole interactions
+	\item London dispersion forces
+\end{itemize}
+Explain the origin of each type of IMF based on the molecular structure.]}
+
+% Question 3 (+2 points): Explain why benzoic acid has a high MP in terms of IMFs
+\subsubsection{Relationship Between IMFs and Melting Point}
+
+\textit{[Explain why benzoic acid has a relatively high melting point (\SI{122.4}{\celsius}) in terms of its intermolecular forces. Discuss how the strong hydrogen bonding between carboxylic acid groups, combined with the aromatic ring's dispersion forces, requires significant thermal energy to overcome.]}
+
+\subsection{Analysis of Purification Results}
+
+% Question 4 (+2 points): Calculate the percent recovery
+\subsubsection{Percent Recovery Analysis}
+
+\textit{[Discuss your calculated percent recovery from Section~\ref{eq:recovery}. Is this value reasonable? What factors affect percent recovery in recrystallization? Consider:
+\begin{itemize}
+	\item The solubility of benzoic acid in water at different temperatures
+	\item The volume of water used
+	\item Loss during transfer and filtration
+\end{itemize}]}
+
+% Question 5 (+3 points): Compare MP of impure vs pure benzoic acid
+\subsubsection{Comparison of Melting Points}
+
+\textit{[Compare the melting point of the impure benzoic acid to that of the purified sample (see Table~\ref{tab:melting-points}). Address:
+\begin{itemize}
+	\item Was the melting point of the impure sample lower than the pure sample?
+	\item Was the melting range of the impure sample wider?
+	\item Do these observations make sense based on melting point depression theory?
+\end{itemize}
+Explain the effect of impurities on the melting point of a substance.]}
+
+% Question 6 (+2 points): Comment on purity based on MP range
+\subsubsection{Purity Assessment}
+
+% TODO: Examine the melting point range for your purified benzoic acid. 
+% Comment on the purity of your sample based on:
+% - How narrow was the melting range? (A range < 1°C indicates high purity)
+% - How close was the observed melting point to the literature value?
+
+\textit{Write your purity assessment here based on the criteria above.}
+
+\subsection{Error Analysis}
+
+% Question 7 (+5 points): Discuss sources of error
+% TODO: Discuss possible sources of error in this experiment.
+% For EACH error you identify:
+%   1. Identify the error (be specific)
+%   2. Explain how it affected your results (higher/lower recovery, MP, etc.)
+%   3. Describe what you could do differently to minimize this error
+%
+% Consider errors from:
+%   - Recrystallization procedure (e.g., cooling too quickly, not enough water, loss during transfer)
+%   - Vacuum filtration (e.g., incomplete collection, washing losses)
+%   - Melting point determination (e.g., heating rate, capillary tube packing)
+
+\textit{Write your error analysis here, addressing at least 2--3 specific sources of error.}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION & SUMMARY (+3 points)
+%----------------------------------------------------------------------------------------
+
+\section{Conclusion}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - Summarize the main objectives and findings
+% - State whether the objectives were achieved
+% - Highlight the significance of your results
+% - Keep this section brief (1 paragraph)
+
+\textit{[Write a brief conclusion that:
+\begin{itemize}
+	\item Restates the purpose of the experiment
+	\item Summarizes the key results (percent recovery, melting points)
+	\item States whether the purification was successful based on melting point data
+	\item Mentions any directions for improvement if the experiment were repeated
+\end{itemize}]}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES (+2 points)
+%----------------------------------------------------------------------------------------
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+
+% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
+% - Include all sources cited in your report
+% - Use ACS citation format
+% - Primary literature sources are preferred over websites
+% - At minimum, cite your source for the literature melting point and solubility
+
+% Option 1: Using BibLaTeX (recommended)
+% Create a references.bib file in the same folder with your bibliography entries
+% Then uncomment the following line:
+% \printbibliography[heading=none]
+
+% Option 2: Manual references (if not using BibLaTeX)
+% TODO: Replace with your actual references
+\begin{enumerate}
+	\item National Center for Biotechnology Information. PubChem Compound Summary for CID 243, Benzoic acid. \url{https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-acid} (accessed [date]).
+	
+	\item \textit{[Add additional references as needed]}
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	APPENDIX (Optional)
+%----------------------------------------------------------------------------------------
+
+% Uncomment if you need to include raw data, additional calculations, etc.
+%\newpage
+%\appendix
+%\section{Raw Data}
+%\textit{[Include any raw data sheets, additional calculations, or supplementary information here.]}
+
+% Balance columns on the last page
+\balance
+
+\end{document}
+
