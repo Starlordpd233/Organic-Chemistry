@@ -43,7 +43,9 @@
 \sisetup{
 	separate-uncertainty=true,
 	range-phrase=--,
-	range-units=single
+	range-units=single,
+	per-mode=fraction,
+	fraction-function=\frac
 }
 \usepackage{chemfig}
 
@@ -55,7 +57,8 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-% Hyperlinks
+% Colors and hyperlinks
+\usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
@@ -64,6 +67,9 @@
 	urlcolor=blue!70!black,
 }
 \usepackage{xurl}
+
+% Make all in-text citations a distinct color
+\AtEveryCite{\color{blue!70!black}}
 
 % Section styling (compact, bold, sans-serif headings)
 \usepackage{titlesec}
@@ -107,7 +113,7 @@
 \newcommand{\reporttitle}{Recrystallization and Melting Point Determination of Benzoic Acid}
 \newcommand{\reportauthor}{Matthew Li}
 \newcommand{\reportpartner}{Tintin Ding}
-\newcommand{\reportinstructor}{Mr. O}
+\newcommand{\reportinstructor}{Mr. Osei-Mensah}
 \newcommand{\reportcourse}{CL Organic Chemistry}
 \newcommand{\reportsection}{B4}
 \newcommand{\reportinstitution}{Loomis Chaffee High School}
@@ -168,7 +174,35 @@
 % TODO: Write your introduction here
 
 % Paragraph 1: Purpose and significance
-\textit{[State the purpose of this experiment. Explain why purification of organic compounds is important in chemistry.]}
+
+
+Organic compounds are often impure, after synthesized in the laboratory or isolated from natural sources. This contamination needs to be removed before 
+those compounds can be applied and utilized in other applications. One of the most common and important methods of purification, for an organic chemist to know,
+is \textbf{recrystallization}. It is essentially a technique to remove impurities from organic compounds that are solid at room temperature. Because the solubility of
+a compound in a solvent generally increases with temperature, if we allow the solution containing the compound to cool slowly until the solution becomes saturated,
+we can obtain relatively pure crystals because molecules in the crystals have a greater affinity for other molecules of the same type. Afterwards, the impurities
+are left in the solution, and the pure compound is isolated and crystallized. 
+
+\vspace{1em}
+
+The purpose of this experiment is to purify impure benzoic acid (\ce{C6H5COOH}) that contains sugar, via recrystallization. Then, we will determine
+the melting point of both the impure and pure benzoic acid samples to confirm the success of the process of recrystallization and purification. Because
+the melting point of an impure compound—in this case, benzoic acid with sugar—will typically be a wider range at a higher temperature, and because the
+purified compound will have a much narrower range at a lower temperature, we can use the melting point to assess the purity of the compound. 
+
+\vspace{1em}
+
+Benzoic acid is a white or colorless crystalline organic compound whose structure consists of a benzene ring (\ce{C6H6}) and a carboxyl substituent. 
+The substance occurs naturally in many plants, and salts of benzoic acid are used as food preservatives. It is also an important element for the industrial
+synthesis of many other organic compounds.\cite{wikipedia_benzoic_acid} 
+
+\vspace{1em}
+
+According to the PubChem Compound Summary for benzoic acid, the melting point of benzoic acid is around \SI{122.4}{\celsius} and its solubility in water
+is around \SI{3.4}{\milli\gram\per\milli\liter} at \SI{25}{\celsius}~\cite{pubchem_benzoic_acid}.
+The melting point of sugar (sucrose) is around \SI{185.5}{\celsius} and its solubility in water is around \SI{2.12e6}{\milli\gram\per\liter} at \SI{25}{\celsius}~\cite{pubchem_sucrose}.
+
+
 
 % Paragraph 2: Recrystallization theory
 \textit{[Explain the theory behind recrystallization. Discuss how solubility changes with temperature and why impurities are left behind in solution.]}
@@ -207,7 +241,7 @@
 	\item Melting point apparatus
 	\item Melting point capillary tubes
 	\item Analytical balance
-	\item Watch glass or weighing boat
+	\item Weighing boat
 \end{itemize}
 
 \subsection{Procedure}
@@ -215,26 +249,26 @@
 % TODO: Describe your procedure
 \subsubsection{Day 1: Recrystallization}
 
-\textit{[Describe the recrystallization procedure:
+
 \begin{enumerate}
 	\item Record the melting point of impure benzoic acid
 	\item Weigh out approximately 1.00 g of impure benzoic acid
 	\item Heat DI water to near boiling
-	\item Dissolve the impure benzoic acid in hot water (record volume used)
+	\item Dissolve the impure benzoic acid in hot water (total volume added: \SI{45}{\milli\liter})
 	\item Allow solution to cool slowly to room temperature
 	\item Place in ice bath to enhance crystallization
 	\item Collect crystals by vacuum filtration
 	\item Allow crystals to dry overnight
-\end{enumerate}]}
+\end{enumerate}
 
 \subsubsection{Day 2: Analysis}
 
-\textit{[Describe the analysis procedure:
+
 \begin{enumerate}
 	\item Retrieve dried crystals from drying oven
 	\item Record mass of purified benzoic acid
 	\item Measure melting point of purified benzoic acid
-\end{enumerate}]}
+\end{enumerate}
 
 %----------------------------------------------------------------------------------------
 %	RESULTS (+6 points)
@@ -251,6 +285,7 @@
 
 \subsection{Experimental Data}
 
+Data is presented in Table~\ref{tab:data} and Table~\ref{tab:melting-points}.
 % TODO: Replace placeholder values with your actual data
 \begin{table}[htbp]
 	\centering
@@ -260,9 +295,9 @@
 		\toprule
 		\textbf{Measurement} & \textbf{Value} & \textbf{Unit} \\
 		\midrule
-		Mass of impure benzoic acid & \textit{XX.XX} & \si{\gram} \\
-		Volume of hot water used & \textit{XX} & \si{\milli\liter} \\
-		Mass of filter paper & \textit{X.XXX} & \si{\gram} \\
+		Mass of impure benzoic acid & \textit{1.018} & \si{\gram} \\
+		Volume of hot deionizedwater used & \textit{45} & \si{\milli\liter} \\
+		Mass of filter paper & \textit{1.099} & \si{\gram} \\
 		Mass of filter paper + crystals & \textit{X.XXX} & \si{\gram} \\
 		Mass of purified benzoic acid & \textit{X.XXX} & \si{\gram} \\
 		\bottomrule
@@ -278,20 +313,41 @@
 		\toprule
 		\textbf{Sample} & \textbf{MP Range} & \textbf{Width} \\
 		\midrule
-		Impure & \textit{XX--XX} \si{\celsius} & \textit{X.X} \si{\celsius} \\
+		Impure & \textit{112--132} \si{\celsius} & \textit{20} \si{\celsius} \\
 		Purified & \textit{XX--XX} \si{\celsius} & \textit{X.X} \si{\celsius} \\
 		Literature\textsuperscript{*} & \SI{122.4}{\celsius} & --- \\
 		\bottomrule
 	\end{tabular}%
 	}
 	
-	{\footnotesize\textsuperscript{*}Cite source for literature MP.}
+	{\footnotesize\textsuperscript{*}Literature melting point from the PubChem Compound Summary for benzoic acid.\cite{pubchem_benzoic_acid}}
 \end{table}
 
 \subsection{Calculations}
 
 % TODO: Show your percent recovery calculation
 \subsubsection{Percent Recovery}
+
+Before calculating the actual percent recovery from the results, we can first find the theoretical maximum of benzoic acid that can be recovered from the recrystallization. 
+We can do this using the solubility of benzoic acid in water at \SI{25}{\celsius}, which is around \SI{3.4}{\milli\gram\per\milli\liter}. 
+
+Thus, 
+
+\begin{align*}
+\text{Solubility} &= \SI{3.4}{\milli\gram\per\milli\liter} \\
+\text{Volume of water used} &= \SI{45}{\milli\liter} \\
+\text{Maximum mass lost to solubility} &= 3.4\,\frac{\si{\milli\gram}}{\si{\milli\liter}} \times 45\,\si{\milli\liter} \\
+                                      &= 153\,\si{\milli\gram} \\
+                                      &= 0.153\,\si{\gram}
+\end{align*}
+
+Therefore, the theoretical maximum recovery is:
+
+\begin{align*}
+\text{Theoretical max} &= 1.018\,\si{\gram} - 0.153\,\si{\gram} \\
+						&= 0.865\,\si{\gram}
+\end{align*}
+
 
 The percent recovery of benzoic acid was calculated using the following equation:
 
@@ -436,15 +492,15 @@ Explain the effect of impurities on the melting point of a substance.]}
 % Option 1: Using BibLaTeX (recommended)
 % Create a references.bib file in the same folder with your bibliography entries
 % Then uncomment the following line:
-% \printbibliography[heading=none]
+\printbibliography[heading=none]
 
 % Option 2: Manual references (if not using BibLaTeX)
-% TODO: Replace with your actual references
-\begin{enumerate}
-	\item National Center for Biotechnology Information. PubChem Compound Summary for CID 243, Benzoic acid. \url{https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-acid} (accessed [date]).
-	
-	\item \textit{[Add additional references as needed]}
-\end{enumerate}
+% (Not used; references are handled via BibLaTeX.)
+%\begin{enumerate}
+%	\item National Center for Biotechnology Information. PubChem Compound Summary for CID 243, Benzoic acid. \url{https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-acid} (accessed [date]).
+%	
+%	\item \textit{[Add additional references as needed]}
+%\end{enumerate}
 
 %----------------------------------------------------------------------------------------
 %	APPENDIX (Optional)
