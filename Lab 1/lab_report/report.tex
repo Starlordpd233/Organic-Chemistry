@@ -1,43 +1,26 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Organic Chemistry Lab Report
-% Lab 1: Recrystallization & Melting Point Determination
-%
-% Professional Research Paper Format (ACS-inspired)
-%
-% License: CC BY-NC-SA 4.0
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT CLASS AND PACKAGES
-%----------------------------------------------------------------------------------------
-
 \documentclass[
-	10pt,        % Smaller font for two-column
-	twocolumn,   % Professional two-column layout
+	10pt,
+	twocolumn,
 	letterpaper,
 ]{article}
-
-% Page geometry (journal-style margins)
 \usepackage[
 	top=0.75in,
 	bottom=1in,
 	left=0.75in,
 	right=0.75in,
-	columnsep=0.25in, % Space between columns
+	columnsep=0.25in,
 	headheight=14pt,
 ]{geometry}
 
-% Core packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{mathpazo}         % Palatino font
-\usepackage{microtype}        % Professional micro-typography (spacing, protrusion)
+\usepackage{mathpazo}
+\usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
 \usepackage{float}
 
-% Chemistry-specific packages
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
 \sisetup{
@@ -49,7 +32,6 @@
 }
 \usepackage{chemfig}
 
-% Bibliography
 \usepackage[
 	backend=biber,
 	style=chem-acs,
@@ -57,7 +39,6 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-% Colors and hyperlinks
 \usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -68,10 +49,8 @@
 }
 \usepackage{xurl}
 
-% Make all in-text citations a distinct color
 \AtEveryCite{\color{blue!70!black}}
 
-% Section styling (compact, bold, sans-serif headings)
 \usepackage{titlesec}
 \titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
@@ -80,7 +59,6 @@
 \titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.1ex}{0.8ex plus 0.1ex}
 \titlespacing*{\subsubsection}{0pt}{1ex plus 0.2ex minus 0.1ex}{0.5ex plus 0.1ex}
 
-% Headers and footers (minimal for journal style)
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -89,11 +67,9 @@
 \fancyhead[R]{\small\textit{M. Li}}
 \fancyfoot[C]{\thepage}
 
-% Paragraph formatting (indented, no extra spacing - classic journal style)
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0pt}
 
-% Caption formatting
 \usepackage{caption}
 \captionsetup{
 	font=small,
@@ -103,12 +79,8 @@
 	skip=6pt,
 }
 
-% Balance columns on last page
 \usepackage{balance}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND AUTHOR INFORMATION
-%----------------------------------------------------------------------------------------
 
 \newcommand{\reporttitle}{Recrystallization and Melting Point Determination of Benzoic Acid}
 \newcommand{\reportauthor}{Matthew Li}
@@ -119,15 +91,9 @@
 \newcommand{\reportinstitution}{Loomis Chaffee High School}
 \newcommand{\reportdate}{\today}
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT BODY
-%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE BLOCK (spans both columns)
-%----------------------------------------------------------------------------------------
 
 \twocolumn[
 	\begin{@twocolumnfalse}
@@ -141,13 +107,12 @@
 		{\small\itshape Instructor: \reportinstructor \quad $\cdot$ \quad \reportdate \par}
 		\vspace{0.6cm}
 		
-		% Abstract within the full-width block
 		\noindent\rule{\textwidth}{0.4pt}
 		\vspace{0.3cm}
 		\begin{minipage}{0.92\textwidth}
 			\small
 			\textbf{Abstract:}
-			\textit{[Write a concise summary of the experiment. Include: (1) the purpose---to purify impure benzoic acid via recrystallization and determine its melting point; (2) brief methods---dissolved in hot water, cooled for crystallization, vacuum filtered, measured melting points; (3) key results---report the melting points of impure and pure samples, and percent recovery; (4) conclusions---comment on the success of purification based on melting point data.]}
+			Impure benzoic acid (\SI{1.018}{\gram}) contaminated with sucrose was purified by recrystallization from hot water. The purified product (\SI{0.587}{\gram}, 57.7\% recovery) exhibited a sharp melting point range of \SIrange{122}{123}{\celsius} (width: \SI{1}{\celsius}), in excellent agreement with the literature value of \SI{122.4}{\celsius}. In contrast, the impure sample showed a significantly broader melting range of \SIrange{112}{132}{\celsius} (width: \SI{20}{\celsius}). The narrow melting point range and high percent recovery confirm successful purification of benzoic acid via recrystallization.
 		\end{minipage}
 		\vspace{0.3cm}
 		\noindent\rule{\textwidth}{0.4pt}
@@ -157,23 +122,7 @@
 
 
 
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION (+6 points)
-%----------------------------------------------------------------------------------------
-
 \section{Introduction}
-
-% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
-% - State the PROBLEM and REASON for this experiment
-% - Discuss the TECHNIQUES used (recrystallization, melting point determination)
-% - Review relevant BACKGROUND information and THEORY
-% - Include citations from the literature where appropriate
-% - Explain WHY recrystallization works (solubility vs. temperature)
-% - Explain HOW melting point indicates purity
-
-% TODO: Write your introduction here
-
-% Paragraph 1: Purpose and significance
 
 
 Organic compounds are often impure, after synthesized in the laboratory or isolated from natural sources. This contamination needs to be removed before 
@@ -186,9 +135,10 @@ are left in the solution, and the pure compound is isolated and crystallized.
 \vspace{1em}
 
 The purpose of this experiment is to purify impure benzoic acid (\ce{C6H5COOH}) that contains sugar, via recrystallization. Then, we will determine
-the melting point of both the impure and pure benzoic acid samples to confirm the success of the process of recrystallization and purification. Because
-the melting point of an impure compound—in this case, benzoic acid with sugar—will typically be a wider range at a higher temperature, and because the
-purified compound will have a much narrower range at a lower temperature, we can use the melting point to assess the purity of the compound. 
+the melting point of both the impure and pure benzoic acid samples to confirm the success of the process of recrystallization and purification. Impurities
+typically depress the melting point onset and broaden the melting range. Therefore, an impure compound will exhibit a wider melting range with a depressed
+onset temperature, while a purified compound will have a sharp, narrow melting range close to the literature value. By comparing the melting point ranges,
+we can assess the purity of the compound. 
 
 \vspace{1em}
 
@@ -204,22 +154,9 @@ The melting point of sugar (sucrose) is around \SI{185.5}{\celsius} and its solu
 
 
 
-%----------------------------------------------------------------------------------------
-%	EXPERIMENTAL DETAILS (+10 points)
-%----------------------------------------------------------------------------------------
-
 \section{Experimental Details}
 
-% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
-% - Describe procedures in enough detail that someone else could replicate your work
-% - Include all materials, apparatus, and quantities used
-% - Report actual masses and volumes (not just "about 1 g")
-% - Describe special precautions or safety considerations
-% - Use past tense and passive voice (e.g., "The sample was heated...")
-
 \subsection{Materials and Apparatus}
-
-% TODO: List your materials
 \begin{itemize}
 	\item Impure benzoic acid sample (mass: 1.018 g)
 	\item Deionized (DI) water
@@ -237,60 +174,32 @@ The melting point of sugar (sucrose) is around \SI{185.5}{\celsius} and its solu
 
 \subsection{Procedure}
 
-% TODO: Describe your procedure
 \subsubsection{Day 1: Recrystallization}
 
-
-\begin{enumerate}
-	\item Record the melting point of impure benzoic acid
-	\item Weigh out approximately 1.00 g of impure benzoic acid
-	\item Heat DI water to near boiling
-	\item Dissolve the impure benzoic acid in hot water (total volume added: \SI{45}{\milli\liter})
-	\item Allow solution to cool slowly to room temperature
-	\item Place in ice bath to enhance crystallization
-	\item Collect crystals by vacuum filtration
-	\item Allow crystals to dry overnight
-\end{enumerate}
+The melting point of the impure benzoic acid sample was recorded using a melting point apparatus. Approximately \SI{1.018}{\gram} of impure benzoic acid was weighed on an analytical balance. Deionized water was heated to near boiling on a hot plate, and the impure benzoic acid was dissolved in hot water with a total volume of \SI{45}{\milli\liter} added incrementally until complete dissolution was achieved. The solution was allowed to cool slowly to room temperature, then placed in an ice bath to enhance crystallization. The resulting crystals were collected by vacuum filtration using a Büchner funnel and filter paper (mass: \SI{1.099}{\gram}). The filtered crystals were allowed to dry overnight in a drying oven.
 
 \subsubsection{Day 2: Analysis}
 
-
-\begin{enumerate}
-	\item Retrieve dried crystals from drying oven
-	\item Record mass of purified benzoic acid
-	\item Measure melting point of purified benzoic acid
-\end{enumerate}
-
-%----------------------------------------------------------------------------------------
-%	RESULTS (+6 points)
-%----------------------------------------------------------------------------------------
+The dried crystals were retrieved from the drying oven, and the combined mass of the filter paper and purified benzoic acid was recorded as \SI{1.686}{\gram}. The mass of purified benzoic acid was calculated by subtracting the filter paper mass, yielding \SI{0.587}{\gram}. The melting point of the purified benzoic acid was measured using a melting point apparatus with capillary tubes.
 
 \section{Results}
-
-% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
-% - Present your data clearly using tables and figures
-% - Include all measured values with appropriate significant figures
-% - Use proper units throughout
-% - Label all tables and figures with descriptive captions
-% - Reference all tables and figures in the text
 
 \subsection{Experimental Data}
 
 Data is presented in Table~\ref{tab:data} and Table~\ref{tab:melting-points}.
-% TODO: Replace placeholder values with your actual data
 \begin{table}[htbp]
 	\centering
-	\caption{Summary of experimental mass and melting point data for benzoic acid recrystallization.}
+	\caption{Experimental mass data for benzoic acid recrystallization.}
 	\label{tab:data}
-	\begin{tabular}{@{}lrl@{}}
+	\begin{tabular}{@{}lr@{}}
 		\toprule
-		\textbf{Measurement} & \textbf{Value} & \textbf{Unit} \\
+		\textbf{Measurement} & \textbf{Value} \\
 		\midrule
-		Mass of impure benzoic acid & \textit{1.018} & \si{\gram} \\
-		Volume of hot deionizedwater used & \textit{45} & \si{\milli\liter} \\
-		Mass of filter paper & \textit{1.099} & \si{\gram} \\
-		Mass of filter paper + crystals & \textit{1.686} & \si{\gram} \\
-		Mass of purified benzoic acid & \textit{0.587} & \si{\gram} \\
+		Mass of impure benzoic acid & \SI{1.018}{\gram} \\
+		Volume of hot deionized water used & \SI{45}{\milli\liter} \\
+		Mass of filter paper & \SI{1.099}{\gram} \\
+		Mass of filter paper + crystals & \SI{1.686}{\gram} \\
+		Mass of purified benzoic acid & \SI{0.587}{\gram} \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -299,24 +208,21 @@ Data is presented in Table~\ref{tab:data} and Table~\ref{tab:melting-points}.
 	\centering
 	\caption{Melting point data for impure and purified benzoic acid samples.}
 	\label{tab:melting-points}
-	\resizebox{\columnwidth}{!}{%
 	\begin{tabular}{@{}lcc@{}}
 		\toprule
 		\textbf{Sample} & \textbf{MP Range} & \textbf{Width} \\
 		\midrule
-		Impure & \textit{112--132} \si{\celsius} & \textit{20} \si{\celsius} \\
-		Purified & \textit{122--123} \si{\celsius} & \textit{1} \si{\celsius} \\
+		Impure & \SIrange{112}{132}{\celsius} & \SI{20}{\celsius} \\
+		Purified & \SIrange{122}{123}{\celsius} & \SI{1}{\celsius} \\
 		Literature\textsuperscript{*} & \SI{122.4}{\celsius} & --- \\
 		\bottomrule
-	\end{tabular}%
-	}
-	
-	{\footnotesize\textsuperscript{*}Literature melting point from the PubChem Compound Summary for benzoic acid.\cite{pubchem_benzoic_acid}}
+	\end{tabular}
+
+	{\footnotesize\textsuperscript{*}Literature value from PubChem.\cite{pubchem_benzoic_acid}}
 \end{table}
 
 \subsection{Calculations}
 
-% TODO: Show your percent recovery calculation
 \subsubsection{Percent Recovery}
 
 Before calculating the actual percent recovery from the results, we can first find the theoretical maximum of benzoic acid that can be recovered from the recrystallization. 
@@ -349,38 +255,23 @@ The percent recovery of benzoic acid was calculated using the following equation
 
 
 \[
-\text{Percent Recovery} = \frac{\textit{0.587} \text{ g}}{\textit{1.000} \text{ g}} \times 100\% = \textit{58.7}\%
+\text{Percent Recovery} = \frac{\textit{0.587} \text{ g}}{\textit{1.018} \text{ g}} \times 100\% = \textit{57.7}\%
 \]
-
-%----------------------------------------------------------------------------------------
-%	DISCUSSION (+18 points)
-%----------------------------------------------------------------------------------------
 
 \section{Discussion}
 
-% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
-% - Interpret your results and relate them to the stated objectives
-% - Discuss what your results MEAN
-% - Compare your results to expected/literature values
-% - You MUST address all 7 questions from the lab handout in this section
-% - Use subsections to organize your discussion logically
-
 \subsection{Structure and Intermolecular Forces of Benzoic Acid}
 
-% Question 1 (+2 points): Draw the bond line structure for benzoic acid
 \subsubsection{Structure of Benzoic Acid}
 
 
-% Example using chemfig (you can replace with an image):
 \begin{figure}[htbp]
 	\centering
-	% TODO: Replace with your own drawing or include an image file
-	\chemfig{*6(-=-(-COOH)=-=)}
-	\caption{Bond line structure of benzoic acid (\ce{C6H5COOH}).}
+	\chemfig{*6(-=-(-C(=[2]O)-[0]OH)=-=)}
+	\caption{Bond-line structure of benzoic acid (\ce{C6H5COOH}).}
 	\label{fig:benzoic-acid}
 \end{figure}
 
-% Question 2 (+2 points): Identify the types of IMFs present
 \subsubsection{Intermolecular Forces in Benzoic Acid}
 
 \begin{itemize}
@@ -389,91 +280,45 @@ The percent recovery of benzoic acid was calculated using the following equation
 	\item London dispersion forces
 \end{itemize}
 
-% Question 3 (+2 points): Explain why benzoic acid has a high MP in terms of IMFs
 \subsubsection{Relationship Between IMFs and Melting Point}
 
-With the presence of Hydrogen bonding of the O-H group, where the Hydrogen atom is partially positive and the Oxygen atom is partially negative, Benzoic acid can form relavively strong IMF with its peers, thereby holding molecules together and have a higher melting point. Also, the size of the benzoic acid, and the C=O group, which led to LDF and dipole-diople interactions, respectively, also plays a role in IMF and the high melting point.
+The relatively high melting point of benzoic acid (\SI{122.4}{\celsius}) results from strong intermolecular forces between molecules. Hydrogen bonding occurs between the partially positive hydrogen of the hydroxyl group (\ce{O-H}) and the partially negative oxygen atoms of neighboring carboxylic acid groups. These hydrogen bonds, along with dipole-dipole interactions from the polar \ce{C=O} group and London dispersion forces from the large aromatic ring system, collectively create strong intermolecular attractions that must be overcome during melting. The combination of these three types of intermolecular forces results in a moderately high melting point characteristic of benzoic acid.
 \subsection{Analysis of Purification Results}
 
-% Question 4 (+2 points): Calculate the percent recovery
 \subsubsection{Percent Recovery Analysis}
 
-The percent recovery of Benzoic acid from crystalization is 58.7 percent, which is a reasonable yield. 
+The experimental percent recovery of 57.7\% is reasonable for recrystallization and represents 67\% of the theoretical maximum recovery (\SI{0.865}{\gram}). This recovery is acceptable for a single recrystallization and could be improved by using minimal solvent volumes and lower crystallization temperatures. 
 
-% Question 5 (+3 points): Compare MP of impure vs pure benzoic acid
 \subsubsection{Comparison of Melting Points}
 
-The melting point of impure benzoic acid ranges from 112-132 Celsius, with a range of ~20 degrees. The melting point of pure benzoic acid, however, are from 122-123 Celsius, with a range of only 1 degree. This drastic decrease in the range of melting point is caused by the increased purity of the substance, where the impure sample has a larger range of melting point than the pure sample. The sugar, which is the impurity in the sample, contributes to the increasing range of the melting point, and by removing the sugars through recrystallization, the pure benzoic acid has a narrower range of MP.
-Explain the effect of impurities on the melting point of a substance.
+The melting point of impure benzoic acid ranged from \SIrange{112}{132}{\celsius} with a width of \SI{20}{\celsius}, while the purified benzoic acid exhibited a melting point range of \SIrange{122}{123}{\celsius} with a width of only \SI{1}{\celsius}. This dramatic narrowing of the melting range and the shift toward the literature value of \SI{122.4}{\celsius} confirms successful purification. The presence of sucrose as an impurity disrupts the crystal lattice of benzoic acid, broadening the melting range. Recrystallization selectively crystallizes benzoic acid while leaving the highly water-soluble sucrose in solution, resulting in a more purified product with a melting point characteristic of a pure compound.
 
-% Question 6 (+2 points): Comment on purity based on MP range
+
 \subsubsection{Purity Assessment}
-% TODO: Examine the melting point range for your purified benzoic acid. 
-% Comment on the purity of your sample based on:
-% - How narrow was the melting range? (A range < 1°C indicates high purity)
-% - How close was the observed melting point to the literature value?
-The melting range is $123.0\,^\circ\mathrm{C} - 122.0\,^\circ\mathrm{C} = 1.0\,^\circ\mathrm{C}$, which indicates high purity of benzoic acid. The observed melting point is very close to the literature value, which is \SI{122.3}{\celsius}, also suggesting that the compound is pure benzoic acid.
+The melting range is $123.0\,^\circ\mathrm{C} - 122.0\,^\circ\mathrm{C} = 1.0\,^\circ\mathrm{C}$, which indicates high purity of benzoic acid. The observed melting point is very close to the literature value of \SI{122.4}{\celsius}, also suggesting that the compound is pure benzoic acid.
 
 \subsection{Error Analysis}
 
-% Question 7 (+5 points): Discuss sources of error
-% TODO: Discuss possible sources of error in this experiment.
-% For EACH error you identify:
-%   1. Identify the error (be specific)
-%   2. Explain how it affected your results (higher/lower recovery, MP, etc.)
-%   3. Describe what you could do differently to minimize this error
-%
-% Consider errors from:
-%   - Recrystallization procedure (e.g., cooling too quickly, not enough water, loss during transfer)
-%   - Vacuum filtration (e.g., incomplete collection, washing losses)
-%   - Melting point determination (e.g., heating rate, capillary tube packing)
-	Factors that might decrease the yield is the solubility of benzoic acid in water at room temperature, which is 3.4 mg/mL. Since 45mL of deionized water is used to dissolve  benzoic acid, about 0.153 g of benzoic acid remains in the water during the recrystallization process. Also, another error that possibly occurs during the process of heating the benzoic acid, where the temperature used is too high that evaporates some benzoic acid into air, producing a pungant smell, also resulting a decrease in recovery rate.
+Several factors contributed to the less-than-quantitative recovery of purified benzoic acid:
 
-%----------------------------------------------------------------------------------------
-%	CONCLUSION & SUMMARY (+3 points)
-%----------------------------------------------------------------------------------------
+\textbf{Solubility loss.} Benzoic acid has a solubility of \SI{3.4}{\milli\gram\per\milli\liter} in water at \SI{25}{\celsius}. With \SI{45}{\milli\liter} of water used, approximately \SI{0.153}{\gram} of benzoic acid remained dissolved in the filtrate, representing a theoretical maximum recovery of \SI{0.865}{\gram} (85\% of the starting material). This solubility loss accounts for the majority of the material not recovered. \textit{Mitigation}: Using a minimal volume of solvent and cooling to \SI{0}{\celsius} in an ice bath (rather than \SI{25}{\celsius}) would reduce solubility losses and improve recovery.
+
+\textbf{Volatilization during heating.} A pungent odor occured during the dissolution step, suggesting that some benzoic acid sublimed or volatilized at elevated temperatures. This volatilization directly decreased the amount of benzoic acid available for crystallization. \textit{Mitigation}: Heating more gently and avoiding prolonged exposure to high temperatures would minimize volatilization losses.
+
+\textbf{Crystal retention on glassware and filter paper.} Small amounts of purified crystals adhered to the Erlenmeyer flask and Büchner funnel during transfer and filtration, further reducing the recovered mass. \textit{Mitigation}: Rinsing glassware and filter cake with minimal volumes of ice-cold water could recover additional product.
+
 
 \section{Conclusion}
 
-[write here]
+Our recrystallization successfully purified a benzoic acid--sucrose mixture, yielding \SI{0.587}{\gram} of purified benzoic acid from \SI{1.018}{\gram} of impure starting material (57.7\% recovery). The improvement in melting point characteristics demonstrates the effectiveness of the purification: the impure sample exhibited a broad melting range of \SIrange{112}{132}{\celsius} (width: \SI{20}{\celsius}), while the purified product showed a sharp melting point of \SIrange{122}{123}{\celsius} (width: \SI{1}{\celsius}), in agreement with the literature value of \SI{122.4}{\celsius}. The narrow melting range and close agreement with literature data demonstrate that high-purity benzoic acid was obtained. Future work could improve recovery by minimizing solvent volume, cooling to lower temperatures, and controlling heating rates to reduce volatilization losses.
 
-%----------------------------------------------------------------------------------------
-%	REFERENCES (+2 points)
-%----------------------------------------------------------------------------------------
 
 \section*{References}
 \addcontentsline{toc}{section}{References}
 
-% INSTRUCTIONS (DELETE BEFORE SUBMISSION):
-% - Include all sources cited in your report
-% - Use ACS citation format
-% - Primary literature sources are preferred over websites
-% - At minimum, cite your source for the literature melting point and solubility
 
-% Option 1: Using BibLaTeX (recommended)
-% Create a references.bib file in the same folder with your bibliography entries
-% Then uncomment the following line:
 \printbibliography[heading=none]
 
-% Option 2: Manual references (if not using BibLaTeX)
-% (Not used; references are handled via BibLaTeX.)
-%\begin{enumerate}
-%	\item National Center for Biotechnology Information. PubChem Compound Summary for CID 243, Benzoic acid. \url{https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-acid} (accessed [date]).
-%	
-%	\item \textit{[Add additional references as needed]}
-%\end{enumerate}
-
-%----------------------------------------------------------------------------------------
-%	APPENDIX (Optional)
-%----------------------------------------------------------------------------------------
-
-% Uncomment if you need to include raw data, additional calculations, etc.
-%\newpage
-%\appendix
-%\section{Raw Data}
-%\textit{[Include any raw data sheets, additional calculations, or supplementary information here.]}
-
-% Balance columns on the last page
 \balance
 
 \end{document}

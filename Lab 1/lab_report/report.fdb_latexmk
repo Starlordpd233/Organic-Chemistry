@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber report"] 1765682881.7509 "report.bcf" "report.bbl" "report" 1765861197.08908 0
+["biber report"] 1765910199.28212 "report.bcf" "report.bbl" "report" 1765911582.28452 0
   "references.bib" 1765064838.27998 2458 185d85cf402106d7c83dcfd70dc254b0 ""
-  "report.bcf" 1765861196.98531 108484 7e01d58bf4347aee77ae709ed2a50124 "pdflatex"
+  "report.bcf" 1765911582.17331 108484 7e01d58bf4347aee77ae709ed2a50124 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1765861195.41667 "/Users/MatthewLi/Desktop/Senior Year/Winter/Organic Chemistry/Lab 1/lab_report/report.tex" "report.pdf" "report" 1765861197.08938 0
-  "/Users/MatthewLi/Desktop/Senior Year/Winter/Organic Chemistry/Lab 1/lab_report/report.tex" 1765861195.15921 19951 123193a8453b0e7f4a88cbb08d11cf60 ""
+["pdflatex"] 1765911580.19864 "/Users/MatthewLi/Desktop/Senior Year/Winter/Organic Chemistry/Lab 1/lab_report/report.tex" "report.pdf" "report" 1765911582.28484 0
+  "/Users/MatthewLi/Desktop/Senior Year/Winter/Organic Chemistry/Lab 1/lab_report/report.tex" 1765911579.76201 15423 55018f409a809237dd1393636b024c9a ""
   "/Users/MatthewLi/Library/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1763152650 5523689 3cddb2adb5788062bb74e2338ac94265 ""
   "/Users/MatthewLi/Library/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1763500577 3635531 32fdfba7e481d705390f47645e9c2f34 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -219,11 +219,11 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/xurl/xurl.sty" 1641763214 4675 e4b8c405820368c2dfb03526e16d725a ""
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "report.aux" 1765861196.98377 4776 0516d268e5e1b1cd4a1299e40df7a936 "pdflatex"
-  "report.bbl" 1765682883.6798 4863 3810f427b600432aa0026ecf9aec6376 "biber report"
-  "report.out" 1765861196.98446 3669 407316ef081d085964c7881766b25c31 "pdflatex"
-  "report.run.xml" 1765861196.98626 2424 f6180f68a326850491e04e294361a82e "pdflatex"
-  "report.tex" 1765861195.15921 19951 123193a8453b0e7f4a88cbb08d11cf60 ""
+  "report.aux" 1765911582.17127 4718 1cdf28c4cbe46f0163130068b75f4898 "pdflatex"
+  "report.bbl" 1765910202.02898 4863 3810f427b600432aa0026ecf9aec6376 "biber report"
+  "report.out" 1765911582.17233 3669 407316ef081d085964c7881766b25c31 "pdflatex"
+  "report.run.xml" 1765911582.17412 2424 f6180f68a326850491e04e294361a82e "pdflatex"
+  "report.tex" 1765911579.76201 15423 55018f409a809237dd1393636b024c9a ""
   (generated)
   "report.aux"
   "report.bcf"
