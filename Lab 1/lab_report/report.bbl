@@ -1,0 +1,132 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{wikipedia_benzoic_acid}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed 2025-12-06}
+      \field{title}{Benzoic acid --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Benzoic_acid
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Benzoic_acid
+      \endverb
+    \endentry
+    \entry{pubchem_benzoic_acid}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=21077625546dd35d1e785cf769e5abdb}{%
+           family={{National Center for Biotechnology Information}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {National Library of Medicine (US)}%
+      }
+      \strng{namehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{fullhash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{fullhashraw}{21077625546dd35d1e785cf769e5abdb}
+      \strng{bibnamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorbibnamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authornamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorfullhash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorfullhashraw}{21077625546dd35d1e785cf769e5abdb}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed 2025-12-06}
+      \field{title}{PubChem Compound Summary for CID 243, Benzoic acid}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-Acid
+      \endverb
+      \verb{url}
+      \verb https://pubchem.ncbi.nlm.nih.gov/compound/Benzoic-Acid
+      \endverb
+    \endentry
+    \entry{pubchem_sucrose}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=21077625546dd35d1e785cf769e5abdb}{%
+           family={{National Center for Biotechnology Information}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {National Library of Medicine (US)}%
+      }
+      \strng{namehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{fullhash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{fullhashraw}{21077625546dd35d1e785cf769e5abdb}
+      \strng{bibnamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorbibnamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authornamehash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorfullhash}{21077625546dd35d1e785cf769e5abdb}
+      \strng{authorfullhashraw}{21077625546dd35d1e785cf769e5abdb}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed 2025-12-06}
+      \field{title}{PubChem Compound Summary for CID 5988, Sucrose}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pubchem.ncbi.nlm.nih.gov/compound/Sucrose
+      \endverb
+      \verb{url}
+      \verb https://pubchem.ncbi.nlm.nih.gov/compound/Sucrose
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
