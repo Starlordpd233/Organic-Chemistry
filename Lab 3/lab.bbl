@@ -1,0 +1,56 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{hull2001dibenzalacetone}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6de64215907e5ed6297e74e39e1f7990}{%
+           family={Hull},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{fullhash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{fullhashraw}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{bibnamehash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{authorbibnamehash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{authornamehash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{authorfullhash}{6de64215907e5ed6297e74e39e1f7990}
+      \strng{authorfullhashraw}{6de64215907e5ed6297e74e39e1f7990}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Chem. Educ.}
+      \field{number}{2}
+      \field{title}{The Dibenzalacetone Reaction Revisited}
+      \field{volume}{78\textnormal{ (2)}}
+      \field{year}{2001}
+      \field{pages}{226\bibrangedash 227}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1021/ed078p226
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,290 @@
+% =============================================================================
+% Lab 3 Report — Mixed Aldol Condensation Reaction
+% Template prepared from the Lab 3 handout.
+% Fill in all items marked with [...] or \TODO{}.
+% =============================================================================
+
+\documentclass[
+  10pt,
+  twocolumn,
+  letterpaper,
+]{article}
+\usepackage[
+  top=0.75in,
+  bottom=1in,
+  left=0.75in,
+  right=0.75in,
+  columnsep=0.25in,
+  headheight=14pt,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{
+  separate-uncertainty=true,
+  range-phrase=--,
+  range-units=single,
+  per-mode=fraction,
+  fraction-function=\frac
+}
+\usepackage{chemfig}
+
+\usepackage[
+  backend=biber,
+  style=chem-acs,
+  doi=true,
+  sorting=none,
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue!70!black,
+  urlcolor=blue!70!black,
+}
+\usepackage{xurl}
+
+\AtEveryCite{\begingroup\color{blue!70!black}}
+\AtEveryCitekey{\endgroup}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.1ex}{0.8ex plus 0.1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.2ex minus 0.1ex}{0.5ex plus 0.1ex}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Aldol Condensation}}
+\fancyhead[R]{\small\textit{M. Li}}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  justification=justified,
+  singlelinecheck=false,
+  skip=6pt,
+}
+
+\usepackage{balance}
+
+% ===== Report metadata (edit these) =====
+\newcommand{\reporttitle}{Obtaining Dibenzalacetone: Aldol Condensation and Purification}
+\newcommand{\reportauthor}{Matthew Li}
+\newcommand{\reportpartner}{Cookie Danchaivijitr}            % <-- fill in
+\newcommand{\reportinstructor}{Mr. Osei-Mensah}
+\newcommand{\reportcourse}{CL Organic Chemistry}
+\newcommand{\reportsection}{B4}
+\newcommand{\reportinstitution}{Loomis Chaffee High School}
+\newcommand{\reportdate}{\today}
+
+
+\begin{document}
+
+% =========================================================================
+%  TITLE BLOCK                                              [Handout #1]
+% =========================================================================
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \centering
+    \vspace{0.5cm}
+    {\Large\bfseries \reporttitle \par}
+    \vspace{0.4cm}
+    {\normalsize \reportauthor\textsuperscript{*} and \reportpartner \par}
+    \vspace{0.2cm}
+    {\small\itshape \reportinstitution, \reportcourse\ (Section \reportsection) \par}
+    {\small\itshape Instructor: \reportinstructor \quad $\cdot$ \quad \reportdate \par}
+    \vspace{0.4cm}
+    \noindent\rule{\textwidth}{0.4pt}
+    \vspace{0.5cm}
+  \end{@twocolumnfalse}
+]
+
+
+% =========================================================================
+%  1. PURPOSE                                               [Handout #2]
+% =========================================================================
+\section{Purpose}
+
+The purpose of this lab is to utilize the aldol condensation reaction as a way to synthesize new carbon-carbon bonds and obtain a solid final product, dibenzalacetone. In this experiment, we run a double aldol condensation reaction where acetone reacts with benzaldehyde to form dibenzalacetone, using sodium hydroxide as the catalyst. We then isolate and purify the product through recrystallization and calculate percent yields.
+
+
+% =========================================================================
+%  2. DATA TABLE                                            [Handout #3]
+% =========================================================================
+\section{Data}
+
+\subsection{Data Table}
+
+\begin{table}[H]
+  \centering
+  \caption{Aldol condensation reaction: materials and measurements.}
+  \label{tab:data}
+  \begin{tabular}{@{}p{0.62\columnwidth}p{0.30\columnwidth}@{}}
+    \toprule
+    \textbf{Measurement} & \textbf{Value} \\
+    \midrule
+    Mass of aldehyde used             & \textit{2.003 g} \\
+    Mass of acetone used                  & \textit{0.516 g} \\
+    Mass of crude dibenzalacetone         & \textit{1.084 g} \\
+    Mass of purified dibenzalacetone      & \textit{[...] g} \\
+    Melting point of product              & \textit{[...] \si{\celsius}} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+% =========================================================================
+%  3. CRUDE PERCENT YIELD CALCULATION                       [Handout #4]
+% =========================================================================
+\section{Calculations}
+
+\subsection{Crude Percent Yield}
+
+\begin{align*}
+  n_{\text{acetone}}  &= \frac{m_{\text{acetone}}}{\text{M.W.}_{\text{acetone}}} \\
+                      &= \frac{\textit{0.516\,\si{\gram}}}{\SI{58.08}{\gram\per\mol}} \\
+                      &= \textit{0.00889\,\si{\mol}} \\[6pt]
+  n_{\text{benzaldehyde}} &= \frac{m_{\text{benzaldehyde}}}{\text{M.W.}_{\text{benzaldehyde}}} \\
+                          &= \frac{\textit{2.003\,\si{\gram}}}{\SI{106.13}{\gram\per\mol}} \\
+                          &= \textit{0.0189\,\si{\mol}}
+\end{align*}
+
+\noindent Limiting reagent: \textit{acetone}
+
+\begin{align*}
+  m_{\text{theoretical}} &= n_{\text{limiting}} \times \text{M.W.}_{\text{dibenzalacetone}} \\
+                         &= \textit{0.00889\,\si{\mol}} \times \SI{234.30}{\gram\per\mol} \\
+                         &= \textit{2.08\,\si{\gram}}
+\end{align*}
+
+\begin{equation}
+  \%\ \text{Yield}_{\text{crude}}
+  = \frac{m_{\text{crude}}}{m_{\text{theoretical}}} \times 100\%
+  \label{eq:crude-yield}
+\end{equation}
+
+\begin{align*}
+  \%\ \text{Yield}_{\text{crude}}
+  &= \frac{\textit{1.084\,\si{\gram}}}{\textit{2.08\,\si{\gram}}} \times 100\% \\
+  &= \textit{52.1}\%
+\end{align*}
+
+
+% =========================================================================
+%  4. PURE PERCENT YIELD CALCULATION                        [Handout #5]
+% =========================================================================
+\subsection{Pure Dibenzalacetone Percent Yield}
+
+
+\begin{align*}
+  \%\ \text{Yield}_{\text{pure}}
+  &= \frac{\textit{[...]\,\si{\gram}}}{\textit{2.08\,\si{\gram}}} \times 100\% \\
+  &= \textit{[...]}\%
+\end{align*}
+
+
+% =========================================================================
+%  5. QUESTIONS                                         [Handout #6, #7]
+% =========================================================================
+\section{Questions}
+
+\subsection{Q1. What is the limiting reagent in this aldol reaction?  Why?}
+
+% Handout item #6
+
+The limiting reagent in this reaction is acetone. Dibenzalacetone, by its name, contains two "benzaldehyde" pieces attached to one acetone "core". The chemical equation for the reaction is:
+
+\begin{equation}
+  \ce{2 C6H5CHO + CH3COCH3 -> C17H14O + 2 H2O}
+  \label{eq:reaction}
+\end{equation}
+
+Thus, acetone is the limiting reagent.
+
+
+\subsection{Q2. Effect of benzoic acid contamination in old benzaldehyde}
+
+If the benzaldehyde is contaminated with benzoic acid, the effect will simply be that we will have less NaOH available to provide a basic enough mixture to provide the necessary condition for the aldol condensation reaction to occur. This is a simple acid-base reaction where the base \ce{OH-} will attack the proton on the benzoic acid. Thus, the effective [\ce{OH-}] drops, and there will be less product formed in a slower rate. 
+
+
+% =========================================================================
+%  6. EVIDENCE OF SUCCESSFUL REACTION                       [Handout #8]
+% =========================================================================
+\section{Evidence of Successful Reaction}
+
+% Provide 2 pieces of evidence that your reaction was successful
+% in producing dibenzalacetone.
+
+\begin{enumerate}
+  \item \textit{The first evidence to support the successfull formation of dibenzalacetone is the yellow solid precipitate that formed in the reaction vial during aldol condensation.}
+  \item \textit{Another evidence is that the purified product appears to be a brighter yellow crystalline solid, with sparkly, well-defined grains on the petri dish.}
+\end{enumerate}
+
+
+% =========================================================================
+%  7. ALDOL CONDENSATION MECHANISM PROBLEM                  [Handout #9]
+% =========================================================================
+\section{Aldol Condensation Mechanism Problem}
+
+[Add here]
+
+% =========================================================================
+%  8. CONCLUSION                                           [Handout #10]
+% =========================================================================
+\section{Conclusion}
+
+% Provide a brief summary of the lab, the main principles,
+% key results (% yield, how successful was the lab?),
+% and any skills learned in this lab.
+
+In this lab, we performed a mixed aldol condensation reaction between benzaldehyde and acetone to form the product dibenzalacetone using sodium hydroxide as the base. We observed the successfull formation of the yellow solid precipitate in the reaction vial during the condensation, and the product was isolated as a yellow precipitated solid, consistent with dibenzalacetone formation \cite{hull2001dibenzalacetone}. We also obtained a purified, crystalline solid product after recrystallization with ethanol. 
+
+Using 0.516g acetibe abd 2.003g benzaldehyde, acetone was the limiting reagent, giving a theoretical maximum yield of 2.08g dibenzalacetone. We calculated the crude and pure percent yield of the reaction, and found that the values were 52.1\% and [...], respectively. 
+
+My partners and I have learned, in this lab, to perform aldol condensation, isolation of product, and recrystallization and purity assessment. Further improvements can be made through using freshly distilled (or clearly uncontaminated) benzaldehyde, as old benzaldehyde can be subject to the impact of benzoic acid, which neutralizes some of the NaOH used during the reaction, elading to a potentially lower percent yield.
+
+\textit{[Write a conclusion summarizing the lab.  Include:
+\begin{itemize}
+  \item A brief summary of the experiment and its main principles
+        (aldol condensation, carbon--carbon bond formation).
+  \item Key results: crude and pure percent yields, melting point
+        comparison with the literature value, and overall success
+        of the reaction.
+  \item Skills learned during this lab (e.g., recrystallization,
+        vacuum filtration, melting point determination, yield
+        calculations).
+\end{itemize}]}
+
+
+% =========================================================================
+%  REFERENCES
+% =========================================================================
+\balance
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\printbibliography[heading=none]
+
+\end{document}

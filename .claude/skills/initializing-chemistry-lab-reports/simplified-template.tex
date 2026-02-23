@@ -1,0 +1,207 @@
+% Simplified Lab Report Format for Chemistry Labs
+% Use for: Labs with Purpose [+2], Data Tables, Q&A format, Chemical Structures, ~25 points
+
+\documentclass[
+	11pt,
+	letterpaper,
+]{article}
+\usepackage[
+	top=1in,
+	bottom=1in,
+	left=1in,
+	right=1in,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+% Chemistry packages
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{
+	separate-uncertainty=true,
+	range-phrase=--,
+	range-units=single,
+	per-mode=fraction,
+	fraction-function=\frac
+}
+\usepackage{chemfig}
+
+% Formatting
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue,
+}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Experiment Title}}
+\fancyhead[R]{\small\textit{Your Name}}
+\fancyfoot[C]{\thepage}
+
+\usepackage{caption}
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	justification=justified,
+	skip=6pt,
+}
+
+% ============================================
+% STUDENT INFORMATION - EDIT THESE VALUES
+% ============================================
+\newcommand{\reporttitle}{Experiment Title}
+\newcommand{\reportauthor}{Your Name}
+\newcommand{\reportpartner}{Lab Partner Name}
+\newcommand{\reportinstructor}{Instructor Name}
+\newcommand{\reportcourse}{Course Name}
+\newcommand{\reportsection}{Section}
+\newcommand{\reportdate}{\today}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries \reporttitle \par}
+\vspace{0.3cm}
+{\normalsize \reportauthor \quad \reportpartner \par}
+\vspace{0.2cm}
+{\small \reportcourse\ (Section \reportsection) \par}
+{\small Instructor: \reportinstructor \quad \reportdate \par}
+\end{center}
+
+\vspace{0.5cm}
+
+\section{Purpose}
+
+% PURPOSE GOES HERE
+% In your own words, describe:
+% - The goal of the lab
+% - Brief background information to help the reader understand
+% - What you are trying to accomplish
+
+\vspace{1em}
+
+% Example: "The purpose of this experiment is to..."
+
+\section{Data Tables}
+
+% DATA TABLES GO HERE
+% Include all titled tables with measurements
+% Use \begin{table} environment with booktabs
+
+\begin{table}[htbp]
+	\centering
+	\caption{Descriptive title for this data table.}
+	\label{tab:data1}
+	\begin{tabular}{@{}lr@{}}
+		\toprule
+		\textbf{Measurement} & \textbf{Value} \\
+		\midrule
+		Measurement 1 & \SI{value}{unit} \\
+		Measurement 2 & \SI{value}{unit} \\
+		Measurement 3 & \SI{value}{unit} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+% Add more tables as needed
+
+\section{Calculations}
+
+% CALCULATIONS GO HERE
+% Show all calculations step-by-step
+% Use proper equations with \begin{equation} or \begin{align*}
+
+\subsection{Percent Yield Calculation}
+
+\begin{equation}
+	\%\ \text{Yield} = \frac{m_{\text{actual}}}{m_{\text{theoretical}}} \times 100\%
+\end{equation}
+
+\[
+\text{Percent Yield} = \frac{\textit{actual value} \text{ g}}{\textit{theoretical value} \text{ g}} \times 100\% = \textit{result}\%
+\]
+
+% Add more calculation subsections as needed
+
+\section{Answers to Questions}
+
+% ANSWERS TO QUESTIONS FROM HANDOUT
+% Use \subsection for each question
+
+\subsection{Question 1}
+
+% Answer Question 1 from the handout here
+
+\subsection{Question 2}
+
+% Answer Question 2 from the handout here
+
+\subsection{Question 3}
+
+% Answer Question 3 from the handout here
+
+% Add more questions as needed
+
+\section{Chemical Structures}
+
+% CHEMICAL STRUCTURES GO HERE
+% Use \chemfig for structures or include images
+
+\begin{figure}[htbp]
+	\centering
+	\chemfig{*6(-=-(-C(=[2]O)-[0]OH)=-=)}
+	\caption{Structure description.}
+	\label{fig:structure1}
+\end{figure}
+
+% For complex structures, you can use external images:
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.5\textwidth]{filename.png}
+%   \caption{Structure description.}
+% \end{figure}
+
+\subsection{IUPAC Name}
+
+% IUPAC name goes here
+
+\subsection{Functional Groups}
+
+% List and label all functional groups present
+% Example:
+% \begin{itemize}
+%   \item Carboxylic acid group (-COOH)
+%   \item Aromatic ring
+% \end{itemize}
+
+\section{Conclusion}
+
+% CONCLUSION GOES HERE
+% Provide:
+% - Brief summary of the lab
+% - Main principles involved
+% - Key results (percent yield, success assessment)
+% - Skills you learned in this lab
+
+\vspace{1em}
+
+% Example structure:
+% "In this lab, we investigated [principle]. The key results were [results]. The experiment was [successful/partially successful] as evidenced by [evidence]. Through this lab, I learned [skills]."
+
+\end{document}

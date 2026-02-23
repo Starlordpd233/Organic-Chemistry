@@ -1,0 +1,242 @@
+% Research Paper Format for Chemistry Lab Reports
+% Based on ACS formatting guidelines
+% Use for: Labs with Abstract [+4+], Introduction [+6+], Experimental Details [+10+], Discussion [+18+], References [+2+]
+
+\documentclass[
+	10pt,
+	twocolumn,
+	letterpaper,
+]{article}
+\usepackage[
+	top=0.75in,
+	bottom=1in,
+	left=0.75in,
+	right=0.75in,
+	columnsep=0.25in,
+	headheight=14pt,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+% Chemistry packages
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{
+	separate-uncertainty=true,
+	range-phrase=--,
+	range-units=single,
+	per-mode=fraction,
+	fraction-function=\frac
+}
+\usepackage{chemfig}
+
+% Citations
+\usepackage[
+	backend=biber,
+	style=chem-acs,
+	sorting=none,
+]{biblatex}
+\addbibresource{references.bib}
+
+% Formatting
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=blue!70!black,
+	urlcolor=blue!70!black,
+}
+\usepackage{xurl}
+
+\AtEveryCite{\color{blue!70!black}}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.1ex}{0.8ex plus 0.1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.2ex minus 0.1ex}{0.5ex plus 0.1ex}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Experiment Title}}
+\fancyhead[R]{\small\textit{Your Name}}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+
+\usepackage{caption}
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	justification=justified,
+	singlelinecheck=false,
+	skip=6pt,
+}
+
+\usepackage{balance}
+
+% ============================================
+% STUDENT INFORMATION - EDIT THESE VALUES
+% ============================================
+\newcommand{\reporttitle}{Experiment Title}
+\newcommand{\reportauthor}{Your Name}
+\newcommand{\reportpartner}{Lab Partner Name}
+\newcommand{\reportinstructor}{Instructor Name}
+\newcommand{\reportcourse}{Course Name}
+\newcommand{\reportsection}{Section}
+\newcommand{\reportinstitution}{Institution Name}
+\newcommand{\reportdate}{\today}
+
+\begin{document}
+
+\twocolumn[
+	\begin{@twocolumnfalse}
+		\centering
+		\vspace{0.5cm}
+		{\Large\bfseries \reporttitle \par}
+		\vspace{0.4cm}
+		{\normalsize \reportauthor\textsuperscript{*} and \reportpartner \par}
+		\vspace{0.2cm}
+		{\small\itshape \reportinstitution, \reportcourse\ (Section \reportsection) \par}
+		{\small\itshape Instructor: \reportinstructor \quad $\cdot$ \quad \reportdate \par}
+		\vspace{0.6cm}
+
+		\noindent\rule{\textwidth}{0.4pt}
+		\vspace{0.3cm}
+		\begin{minipage}{0.92\textwidth}
+			\small
+			\textbf{Abstract:}
+			% ABSTRACT GOES HERE (≤200 words)
+			% Summarize:
+			% 1. Purpose of the experiment
+			% 2. Methods used
+			% 3. Key results
+			% 4. Main conclusions
+			% Keep it concise and factual
+		\end{minipage}
+		\vspace{0.3cm}
+		\noindent\rule{\textwidth}{0.4pt}
+		\vspace{0.5cm}
+	\end{@twocolumnfalse}
+]
+
+\section{Introduction}
+
+% INTRODUCTION GOES HERE
+% Include:
+% - Background information on the topic
+% - Problem statement
+% - Literature review (with citations \cite{key})
+% - Objectives of this experiment
+% - Relevant chemical principles
+
+\vspace{1em}
+
+% Example citation format: \cite{pubchem_benzoic_acid}
+
+\section{Experimental Details}
+
+\subsection{Materials and Apparatus}
+\begin{itemize}
+	\item Chemical amounts and purities
+	\item Equipment used
+	\item Instrumentation
+\end{itemize}
+
+\subsection{Procedure}
+
+\subsubsection{Day 1: [Procedure Name]}
+
+% Describe the procedure step-by-step
+% Include masses, volumes, temperatures, times
+
+\subsubsection{Day 2: [Procedure Name]}
+
+% Describe analysis procedures
+
+\section{Results}
+
+\subsection{Experimental Data}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Descriptive title for data table.}
+	\label{tab:data}
+	\begin{tabular}{@{}lr@{}}
+		\toprule
+		\textbf{Measurement} & \textbf{Value} \\
+		\midrule
+		Measurement 1 & \SI{value}{unit} \\
+		Measurement 2 & \SI{value}{unit} \\
+		Measurement 3 & \SI{value}{unit} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{Calculations}
+
+\subsubsection{[Calculation Name]}
+
+% Show all calculations with proper equations
+% Use \begin{equation} for numbered equations
+% Use \begin{align*} for multi-step calculations
+
+Example:
+\begin{equation}
+	\%\ \text{Yield} = \frac{m_{\text{product}}}{m_{\text{theoretical}}} \times 100\%
+	\label{eq:yield}
+\end{equation}
+
+\section{Discussion}
+
+% DISCUSSION GOES HERE
+% Include:
+% - Interpretation of results
+% - Comparison to literature values
+% - Explanation of observations
+% - Error analysis (sources of error, their effects, mitigation)
+% - Relation to research questions
+
+% Integrate answers to any questions from the handout
+% Use citations: \cite{reference_key}
+
+\subsection{[Subtopic 1]}
+
+% Organize discussion by subtopics
+
+\subsection{Error Analysis}
+
+% Identify sources of error
+% Explain how each error affected results
+% Suggest improvements
+
+\section{Conclusion}
+
+% CONCLUSION GOES HERE
+% Summarize:
+% - Brief summary of the experiment
+% - Main findings (quantitative results)
+% - Success assessment
+% - Skills learned
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+
+\printbibliography[heading=none]
+
+\balance
+
+\end{document}

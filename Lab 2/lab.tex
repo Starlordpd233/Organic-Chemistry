@@ -1,0 +1,234 @@
+\documentclass[
+  10pt,
+  twocolumn,
+  letterpaper,
+]{article}
+\usepackage[
+  top=0.75in,
+  bottom=1in,
+  left=0.75in,
+  right=0.75in,
+  columnsep=0.25in,
+  headheight=14pt,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\sisetup{
+  separate-uncertainty=true,
+  range-phrase=--,
+  range-units=single,
+  per-mode=fraction,
+  fraction-function=\frac
+}
+\usepackage{chemfig}
+
+\usepackage[
+  backend=biber,
+  style=chem-acs,
+  sorting=none,
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue!70!black,
+  urlcolor=blue!70!black,
+}
+\usepackage{xurl}
+
+\AtEveryCite{\begingroup\color{blue!70!black}}
+\AtEveryCitekey{\endgroup}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.3ex minus 0.1ex}{0.8ex plus 0.1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.2ex minus 0.1ex}{0.5ex plus 0.1ex}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Isolation of Cinnamaldehyde}}
+\fancyhead[R]{\small\textit{M. Li}}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  justification=justified,
+  singlelinecheck=false,
+  skip=6pt,
+}
+
+\usepackage{balance}
+
+% ===== Report metadata (edit these) =====
+\newcommand{\reporttitle}{Isolation of Cinnamaldehyde from Cinnamon Sticks}
+\newcommand{\reportauthor}{Matthew Li}
+\newcommand{\reportpartner}{George Mirgorodskiy}
+\newcommand{\reportinstructor}{Mr. Osei-Mensah}
+\newcommand{\reportcourse}{CL Organic Chemistry}
+\newcommand{\reportsection}{B4}
+\newcommand{\reportinstitution}{Loomis Chaffee High School}
+\newcommand{\reportdate}{\today}
+
+\begin{document}
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \centering
+    \vspace{0.5cm}
+    {\Large\bfseries \reporttitle \par}
+    \vspace{0.4cm}
+    {\normalsize \reportauthor\textsuperscript{*} and \reportpartner \par}
+    \vspace{0.2cm}
+    {\small\itshape \reportinstitution, \reportcourse\ (Section \reportsection) \par}
+    {\small\itshape Instructor: \reportinstructor \quad $\cdot$ \quad \reportdate \par}
+    \vspace{0.4cm}
+    \noindent\rule{\textwidth}{0.4pt}
+    \vspace{0.5cm}
+  \end{@twocolumnfalse}
+]
+
+\section{Purpose}
+Prior work on extracting cinnamaldehyde from common cinnamon sticks (easily accessible kinds from daily markets) has focused on extracting the essential oil and quantifying cinnamaldehyde in the resulting product. Usually, steam distillation and hydrodistillation are commonly used methods, and various percent yields of products have been determined for different species of \textit{Cinnamomum}.~\cite{kasim2014_cinnamon_essential_oil}
+
+The purpose of this lab is to extract the active ingredient (cinnamaldehyde) in the spice (cinnamon) from cinnamon sticks, which gives cinnamon its unique taste and flavor. Hot boiling water is initially used to extract the oil of cinnamon from cinnamon sticks; then, ethyl ether is used to extract cinnamaldehyde from the oil. To test for successful extraction, the Tollens test, a qualitative test, is used to observe the formation of silver mirror.
+
+\section{Data}
+
+\subsection{Data Table}
+
+\begin{table}[H]
+  \centering
+  \caption{Isolation of cinnamaldehyde: materials and measurements.}
+  \label{tab:data}
+  \begin{tabular}{@{}p{0.62\columnwidth}p{0.30\columnwidth}@{}}
+    \toprule
+    \textbf{Measurement} & \textbf{Value} \\
+    \midrule
+    Mass of cinnamon sticks & \textit{1.84 (g)} \\
+    Volume of (deionized) water used & \SI{305}{\milli\liter} \\
+    Number of extractions & 2 \\
+    Mass of empty Petri dish & \textit{37.377 (g)} \\
+    Mass of Petri dish + product & \textit{37.448 (g)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Analysis (Observations and Results)}
+
+\subsection{Physical Observations}
+
+\begin{itemize}
+  \item Odor of the extracted cinnamaldehyde (Step 16): \textit{The compound on the petri dish has a strong smell of cinnamon, as expected, mixed with some residual odor of ethyl ether.}
+  \item Appearance (Steps 10--12): \textit{The extracted cinnamaldehyde appears as light-orange, small clusters of tiny spots on the petri dish.}
+\end{itemize}
+
+\subsection{Tollens Test Result}
+
+\begin{itemize}
+  \item Observation: A thin layer of silver mirror is observed on the bottom of the petri dish, indicating the successful presence of cinnamaldehyde.
+  \item Approximate time to positive result: reaction was left overnight due to insufficient class time for final silver mirror product formation.
+\end{itemize}
+
+\section{Questions}
+
+\subsection{Q1. Other compounds isolated by solvent extraction}
+
+Besides the extraction of cinnamaldehyde from the obtained cinnamon oil, research suggests several other common compounds that can also be potentially isolated and obtained as part of the experiment. Eugenol is a prime example, given that it is a component in the cinnamon oil commonly reported alongside cinnamaldehyde~\cite{utchariyakiat2016_antimicrobial}. Moreover, cinnamyl acetate and cinnamyl alcohol are another frequently detected minor constituents in the Cinnamomum cassia essential oil~\cite{daddabbo2025_nematicidal}.
+
+\subsection{Q2. Artificial flavors and fragrances in the bakery aisle}
+
+\begin{table}[H]
+  \centering
+  \caption{Artificial flavors and fragrances in the bakery aisle. Reproduced from \cite{singh2023_natural_food_flavours}}
+  \label{tab:bakery_flavors}
+  \begin{tabular}{@{}p{0.30\columnwidth}p{0.30\columnwidth}p{0.30\columnwidth}@{}}
+    \toprule
+    \textbf{Compound} & \textbf{Products} & \textbf{Flavor} \\
+    \midrule
+    Diacetyl & Creamy and buttery products & Buttery, warm flavor\\
+    Ethyl vanillin & Cakes, ice cream, biscuits, sweets& Strong vanilla\\
+    Isoamyl Acetate&Banana cakes and pastries&Strong banana or pear-like \\
+    Synthetic Limonene&Marmalades, candies, lemon tarts& Citrus-orange, lemon, sweet lime\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Q3. Why are aldehydes and ketones associated with flavors and fragrances?}
+
+First and foremost, this experiment has demonstrated the characteristic and unique smell and odor of cinnamaldehyde, an aldehyde present in the oil obtained from cinnamon sticks; thus, cinnamaldehyde is specifically associated with cinnamon's taste and flavor. Furthermore, many essential oils and plant extractions contain compounds isolated from nature (aldehyde and ketone) that contribute directly to flavors and tastes~\cite{britannica_essential_oil}.
+
+In addition, aldehydes and ketones are very volatile because they cannot form hydrogen bonds with each other. As a result, they evaporate easily into air, and so they can be easily captured by olfactory receptors, giving rise to their unique and characterizable flavors~\cite{ck12_aldehydes_ketones}.
+
+\section{Calculations: Percent Yield of ``Cinnamaldehyde''}
+
+\begin{equation}
+  \%\ \text{Yield} = \frac{m_{\text{actual}}}{m_{\text{starting}}} \times 100\%
+  \label{eq:yield}
+\end{equation}
+
+\begin{align*}
+  m_{\text{actual}} &= m_{(\text{Petri dish + product})} - m_{(\text{empty Petri dish})} \\
+  &= \SI{37.448}{\gram} - \SI{37.377}{\gram} \\
+  &= \SI{0.071}{\gram} \\
+  \\
+  \%\ \text{Yield} &= \frac{\SI{0.071}{\gram}}{\SI{1.84}{\gram}} \times 100\% \\
+  &= 3.86\%
+\end{align*}
+
+\section{Structure of Cinnamaldehyde}
+
+\begin{figure}[H]
+  \centering
+
+  \chemfig{*6(-=-(-[:30](-[2]H)=[:330](-[6]H)-[:30]C(=[2]O)-[:-30]H)=-=)}
+  \caption{Bond-line structure of cinnamaldehyde.}
+  \label{fig:cinnamaldehyde}
+\end{figure}
+
+\section{IUPAC Name}
+
+\textbf{Cinnamaldehyde:} \textit{(trans)-3-phenylprop-2-enal.}
+
+\section{Functional Groups Present}
+
+Cinnamaldehyde contains three major functional groups. They are an arene (the ring on the left side of the molecule), an aldehyde group (which terminates the right side of the molecule), and an alkene (the double bond in the center of the molecule).
+
+\section{How the Tollens Test Works}
+
+The Tollens Test is a qualitative test that checks the presence of an aldehyde. The reagent is obtained by adding silver nitrate with sodium hydroxide and ammonium hydroxide. When an aldehyde, which is very reactive and easily oxidized, meets the silver ions in that reagent, in this case, cinnamaldehyde, the aldehyde is then converted into a carboxylic acid, and the silver ions are then reduced and gain electrons, forming solid silver. This solid silver plates the interior surface of the reaction vessel, creating the "mirror" effect.
+
+\section{Conclusion}
+
+In this lab, we attempted to extract cinnamaldehyde, the component of cinnamon that gives it its taste and scent, from cinnamon sticks. We used a hot water extraction technique and then performed several ether washes to isolate the product. During the experiment, signs of cinnamaldehyde presence were seen, including a strong cinnamon smell and orange deposited spots on the dish. Using the Tollens test, we were able to qualitatively detect some presence of an aldehyde, with a calculated percent yield of 3.86\%
+
+Further research could be done to verify purity of the product, through methods such as IR spectroscopy. 
+\balance
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\printbibliography[heading=none]
+
+\end{document}
